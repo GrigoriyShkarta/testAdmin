@@ -15,7 +15,7 @@ export default function Exchange() {
 	const [timeLeft, setTimeLeft] = useState(30)
 	const [email, setEmail] = useState('')
 	const [address, setAddress] = useState('')
-	const [loading, setLoading] = useState(false)
+	// const [loading, setLoading] = useState(false)
 	const [account, setAccount] = useState('')
 	const [balance, setBalance] = useState('')
 	const { errors, validateForm } = useFormValidation()
@@ -43,7 +43,7 @@ export default function Exchange() {
 
 	useEffect(() => {
 		const fetchExchangeRate = async () => {
-			setLoading(true)
+			// setLoading(true)
 			try {
 				const rate = await getCryptoExchangeRate(fromCurrency, toCurrency)
 				setExchangeRate(rate)
@@ -51,7 +51,7 @@ export default function Exchange() {
 			} catch (error) {
 				console.error('Error fetching exchange rate:', error)
 			} finally {
-				setLoading(false)
+				// setLoading(false)
 			}
 		}
 
