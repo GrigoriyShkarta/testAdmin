@@ -19,7 +19,8 @@ export default function Tooltip({ showTooltip }: TooltipProps) {
 				rounded-[1rem_1rem_1rem_0.5rem]
         shadow-lg
         z-10
-        ${showTooltip ? 'opacity-100' : 'opacity-0'}
+        transition-opacity duration-300
+        ${showTooltip ? 'opacity-100 visible' : 'opacity-0 invisible'}
     `}
 		>
 			<div className='flex flex-col gap-4'>

@@ -152,6 +152,7 @@ export default function Input({
                     border-2 
                     border-[#eaebeb] 
                     shadow-lg
+										transition-opacity duration-300
                     z-1
                 '
 				>
