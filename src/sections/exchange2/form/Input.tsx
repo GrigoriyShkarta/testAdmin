@@ -139,7 +139,7 @@ export default function Input({
 					{isOpen ? <FiChevronUp size={20} /> : <FiChevronDown size={20} />}
 				</div>
 			)}
-			{isOpen && (
+			{isOpen && onCurrencyChange && (
 				<div
 					ref={dropdownRef}
 					className='
@@ -199,7 +199,7 @@ export default function Input({
 															transition-colors
 													'
 									onClick={() => {
-										onCurrencyChange(option?.symbol)
+										onCurrencyChange(option.symbol)
 										setIsOpen(false)
 										setSearchQuery('')
 									}}
